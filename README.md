@@ -38,7 +38,15 @@ This can be read as a pandas DataFrame using:
 ```python
 import pandas as pd
 df = pd.read_json('data/vnexpress.json')
+# if you want to keep articles with non-empty texts only
+df = df[~df['text'].isna()]
 ```
+
+### Statistics
+
+- 17 categories
+- 18,452 articles
+- 611,733 tokens (single words)
 
 ## Customizations
 
